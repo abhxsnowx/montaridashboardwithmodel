@@ -74,9 +74,9 @@ st.markdown("""
 @st.cache_resource
 def load_production_models():
     try:
-        model = joblib.load(r'new_model\new_production_xgboost_model.pkl')
-        scaler = joblib.load(r'new_model\new_production_scaler.pkl')
-        feature_cols = joblib.load(r'new_model\new_feature_names.pkl')
+        model = joblib.load(r'new_model/new_production_xgboost_model.pkl')
+        scaler = joblib.load(r'new_model/new_production_scaler.pkl')
+        feature_cols = joblib.load(r'new_model/new_feature_names.pkl')
         return model, scaler, feature_cols
     except Exception as e:
         st.error(f"Error loading models: {str(e)}")
@@ -519,3 +519,4 @@ elif page == "Mont Line OEE":
 st.markdown("---")
 
 st.markdown("Montari ILine - Production Analytics System")
+
